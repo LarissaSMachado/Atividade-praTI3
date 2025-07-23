@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <title>Feedback</title>
+</head>
+<body>
+  <h1>Deixe seu Feedback!</h1>
+  <form>
+    <label>Nome:<br><input type="text" name="nome"></label><br><br>
+    <label>Email:<br><input type="email" name="email"></label><br><br>
+    <label>Endereço Completo:<br><input type="text" name="endereco"></label><br><br>
+    <label>Tipo de Feedback:<br><select name="tipo">
+      <option>Sugestão</option>
+      <option>Elogio</option>
+      <option>Crítica</option>
+    </select></label><br><br>
+    <label>Feedback:<br><textarea name="mensagem" rows="5" cols="30"></textarea></label><br><br>
+    <button type="submit">Enviar</button>
+  </form>
+</body>
+</html>
+
+/* styles.css */
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #fdf6f0;
+}
+
+header, main, footer {
+  margin: 10px;
+  padding: 20px;
+  border: 2px solid #c99;
+  background-color: #fff3e0;
+  color: #402000;
+}
+
+h2 {
+  font-size: 1.5em;
+  text-decoration: underline;
+}
+
+.destaque {
+  font-style: italic;
+  background-color: #ffeecc;
+}
+
+#importante {
+  border-top: 4px solid #cc3300;
+}
+
+.hamburger {
+  display: none;
+  font-size: 30px;
+  cursor: pointer;
+}
+
+.menu {
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+
+.menu.open {
+  display: block;
+}
+
+.gallery-container {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.gallery {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+  gap: 10px;
+  max-width: 800px;
+  padding: 20px;
+}
+
+.gallery figure {
+  text-align: center;
+  background: #fff;
+  padding: 10px;
+  border: 1px solid #ccc;
+}
+
+@media (max-width: 600px) {
+  .hamburger {
+    display: block;
+  }
+
+  .menu {
+    display: none;
+    flex-direction: column;
+  }
+}
