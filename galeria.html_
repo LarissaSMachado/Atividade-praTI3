@@ -1,7 +1,49 @@
-<!-- 
-<section class="gallery-container">
-  <div class="gallery">
-    <figure><img src="img1.jpg" alt="Imagem 1"><figcaption>Lanche 1</figcaption></figure>
-    ... repete até 8 imagens ...
-  </div>
-</section> 
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Galeria de Imagens</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <header>
+    <h1>Minha Galeria</h1>
+    <p>Confira algumas imagens escolhidas por mim!</p>
+  </header>
+
+  <main>
+    <section class="galeria">
+      <img src="imagens/foto1.jpg" alt="Descrição da imagem 1">
+      <img src="imagens/projeto-site.png" alt="Descrição da imagem 2">
+      <img src="imagens/selfie-html.jpeg" alt="Descrição da imagem 3">
+      <!-- Adicione mais imagens aqui -->
+    </section>
+  </main>
+
+  <footer>
+    <p>&copy; 2025 - Galeria de Larissa</p>
+  </footer>
+
+</body>
+</html>
+.galeria {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 16px;
+  justify-content: center;
+  padding: 20px;
+}
+
+.galeria img {
+  width: 250px;
+  height: auto;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+  transition: transform 0.3s ease;
+}
+
+.galeria img:hover {
+  transform: scale(1.05);
+}
